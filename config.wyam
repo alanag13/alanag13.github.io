@@ -1,4 +1,4 @@
 Settings.Host = "alangrgic.com";
 GlobalMetadata["Title"] = "Alan Grgic";
-GlobalMetadata["Description"] = "The blog of Alan Grgic";
-GlobalMetadata["Intro"] = "Hi, welcome to my blog!";
+GlobalMetadata["Description"] = "Alan, Automated.";
+GlobalMetadata["Intro"] = "Hi! I'm a full stack software developer based in Minneapolis, MN.";
