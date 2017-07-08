@@ -1,1 +1,0 @@
-# The Personal Blog of Alan Grgic

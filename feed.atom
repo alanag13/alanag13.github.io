@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+	<link rel="self" href="http://alangrgic.com/" />
+	<id>http://alangrgic.com/</id>
+	<title>Alan Grgic</title>
+	<rights>2017</rights>
+	<updated>2017-07-08T19:41:43Z</updated>
+	<subtitle>Alan, Automated.</subtitle>
+	<entry>
+		<link href="http://alangrgic.com/posts/first-post" />
+		<id>http://alangrgic.com/posts/first-post</id>
+		<title>First Post</title>
+		<updated>2016-01-01T00:00:00Z</updated>
+		<content>&lt;p&gt;This is my first post!&lt;/p&gt;
+</content>
+		<summary>&lt;p&gt;This is my first post!&lt;/p&gt;</summary>
+	</entry>
+</feed>
