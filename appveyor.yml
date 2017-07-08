@@ -26,7 +26,7 @@ install:
 test: off
 
 build_script:
-  - .\Wyam\Wyam.exe -r Blog -t CleanBlog
+  - ..\Wyam\Wyam.exe -r Blog -t CleanBlog
 
 on_success:
   - git rev-parse HEAD > _commit.txt
