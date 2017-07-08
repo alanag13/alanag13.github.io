@@ -26,16 +26,19 @@ install:
 test: off
 
 build_script:
-  - ..\Wyam\wyam --output ..\output
+  - .\Wyam\Wyam.exe -r Blog -t CleanBlog
 
 on_success:
   - git rev-parse HEAD > _commit.txt
   - set /P CURRENT_COMMIT=< _commit.txt
   - git clone -b master "https://%GH_TOKEN%@%GH_REF%" _deploy  
   - cd _deploy
+  #delete the whole site
   - git rm -rf .
+  #add some github config files
   - touch .nojekyll
   - echo alangrgic.com > CNAME
+  #copy the new site over
   - xcopy ..\output . /E
   - git config user.name "Appveyor"
   - git config user.email "appveyor@alangrgic.com"
