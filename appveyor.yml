@@ -1,0 +1,44 @@
+init:
+  - git config --global core.autocrlf true
+
+environment:
+  global:
+    GH_REF: github.com/alanag13/alanag13.github.io.git
+
+platform:
+  - x64
+
+branches:
+  only:
+    - source
+
+install:
+  - mkdir ..\Wyam
+  - mkdir ..\output
+  # Fetch the latest version of Wyam 
+  - "curl -s https://raw.githubusercontent.com/Wyamio/Wyam/master/RELEASE -o ..\\Wyam\\wyamversion.txt"
+  - set /P WYAMVERSION=< ..\Wyam\wyamversion.txt
+  - echo %WYAMVERSION%
+  # Get and unzip the latest version of Wyam
+  - ps: Start-FileDownload "https://github.com/Wyamio/Wyam/releases/download/$env:WYAMVERSION/Wyam-$env:WYAMVERSION.zip" -FileName "..\Wyam\Wyam.zip"
+  - 7z x ..\Wyam\Wyam.zip -o..\Wyam -r
+
+test: off
+
+build_script:
+  - ..\Wyam\wyam --output ..\output
+
+on_success:
+  - git rev-parse HEAD > _commit.txt
+  - set /P CURRENT_COMMIT=< _commit.txt
+  - git clone -b master "https://%GH_TOKEN%@%GH_REF%" _deploy  
+  - cd _deploy
+  - git rm -rf .
+  - touch .nojekyll
+  - echo alangrgic.com > CNAME
+  - xcopy ..\output . /E
+  - git config user.name "Appveyor"
+  - git config user.email "appveyor@alangrgic.com"
+  - git add -A
+  - git commit --allow-empty -m "Deploying site for %CURRENT_COMMIT%"
+  - git push origin master
