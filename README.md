@@ -5,6 +5,7 @@
 ## Running the Blog locally
 - Install the latest version of [Wyam](https://github.com/Wyamio/Wyam/releases)
 - Add the path to Wyam.exe to your system PATH environment variable
+- Execute the following in your favorite command line client:
 
 ````
 $ wyam -r Blog -t CleanBlog
