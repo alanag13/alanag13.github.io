@@ -70,14 +70,7 @@
                 </nav>
                 
                 <!-- Page Header -->
-                @{
-                        string backgroundImage = null;
-                        if(Model.String(BlogKeys.Image) != null)
-                        {
-                                backgroundImage = $"background-image: url(\"{Model.String(BlogKeys.Image)}\")";
-                        }
-                }
-                <header class="intro-header" id="intro-header" style="@backgroundImage">
+                <header class="intro-header" id="intro-header">
                         <div class="container">
                                 <div class="row">
                                         <div class="col-md-12">
@@ -111,23 +104,6 @@
                 </footer> 
 
                 @Html.Partial("_Scripts")
-                @if(Model.String(BlogKeys.Image) == null)
-                {
-                        <script type="text/javascript">                
-                                // Header background                        
-                                var colors = Please.make_color({
-                                        colors_returned: 3,
-                                        saturation: .6
-                                });
-                                var t = new Trianglify({
-                                        x_gradient: colors,
-                                        y_gradient: ["#FFFFFF"]
-                                });
-                                var header = document.getElementById("intro-header");
-                                var pattern = t.generate(header.clientWidth, header.clientHeight);
-                                header.setAttribute('style', 'background-image: ' + pattern.dataUrl);                        
-                        </script>
-                }
         </body>
 </html>
 
