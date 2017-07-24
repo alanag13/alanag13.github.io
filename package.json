@@ -1,0 +1,20 @@
+{
+  "name": "alanag13.github.io",
+  "version": "1.0.0",
+  "description": "The personal blog of Alan Grgic",
+  "main": "index.js",
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alanag13/alanag13.github.io.git"
+  },
+  "author": "Alan Grgic",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alanag13/alanag13.github.io/issues"
+  },
+  "homepage": "https://github.com/alanag13/alanag13.github.io#readme"
+}
