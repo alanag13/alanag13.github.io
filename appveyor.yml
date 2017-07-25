@@ -33,7 +33,7 @@ install:
   - set WORKING_DIR=%cd%
   - echo %WORKING_DIR%
   - cd ..
-  - set PATH=%cd%\Wyam\Wyam.exe;%PATH%
+  - set PATH=%cd%\Wyam\;%PATH%
   - echo %PATH%
   - cd %WORKING_DIR%
 test: off
