@@ -27,11 +27,12 @@ install:
   # Get and unzip the latest version of Wyam
   - ps: Start-FileDownload "https://github.com/Wyamio/Wyam/releases/download/$env:WYAMVERSION/Wyam-$env:WYAMVERSION.zip" -FileName "..\Wyam\Wyam.zip"
   - 7z x ..\Wyam\Wyam.zip -o..\Wyam -r
+  - npm install
 
 test: off
 
 build_script:
-  - ..\Wyam\Wyam.exe -r Blog -t CleanBlog
+  - npm run-script build
 
 on_success:
   - git config --global user.name "AppVeyor"
