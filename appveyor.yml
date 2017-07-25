@@ -31,7 +31,7 @@ install:
   - 7z x ..\Wyam\Wyam.zip -o..\Wyam -r
   - npm install
   - cd ..
-  - set PATH=%cd%\Wyam\Wyam.exe;PATH
+  - set PATH=%cd%\Wyam\Wyam.exe;%PATH%
 
 test: off
 
