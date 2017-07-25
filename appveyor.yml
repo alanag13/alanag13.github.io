@@ -30,6 +30,8 @@ install:
   - ps: Start-FileDownload "https://github.com/Wyamio/Wyam/releases/download/$env:WYAMVERSION/Wyam-$env:WYAMVERSION.zip" -FileName "..\Wyam\Wyam.zip"
   - 7z x ..\Wyam\Wyam.zip -o..\Wyam -r
   - npm install
+  - cd ..
+  - set PATH=%cd%\Wyam\Wyam.exe;PATH
 
 test: off
 
