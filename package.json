@@ -1,6 +1,7 @@
 {
   "name": "alanag13.github.io",
   "version": "1.0.0",
+  "private": true,
   "description": "The personal blog of Alan Grgic",
   "main": "index.js",
   "dependencies": {

@@ -14,6 +14,8 @@ branches:
 
 cache:
   - '%USERPROFILE%\.nuget\packages -> **\packages.xml'
+  - node_modules -> package.json
+  - node_cache -> package.json  
 
 install:
   - mkdir ..\Wyam
