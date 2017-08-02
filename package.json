@@ -10,7 +10,7 @@
   },
   "scripts": {
     "start": "wyam -r Blog -t CleanBlog -wp",
-    "wyam": "wyam -r Blog -t CleanBlog -r Blog -t CleanBlog",
+    "wyam": "wyam -r Blog -t CleanBlog",
     "less": "lessc --clean-css ./input/assets/less/styles.less ./input/assets/css/compiled/bootstrap.min.css",
     "build": "npm run less && npm run wyam"
   },
