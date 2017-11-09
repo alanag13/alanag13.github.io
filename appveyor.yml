@@ -48,6 +48,8 @@ on_success:
   - set /P CURRENT_COMMIT=< _commit.txt
   - git clone -b master "https://%GH_TOKEN%@%GH_REF%" _deploy  
   - cd _deploy
+  - del /S /Q *
+  - rmdir /S /Q *
   #add some github config files
   - type NUL > .nojekyll
   - echo alangrgic.com > CNAME
