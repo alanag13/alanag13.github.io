@@ -55,6 +55,6 @@ on_success:
   - echo alangrgic.com > CNAME
   #copy the new site over
   - xcopy ..\output . /E
-  - git add -A
+  - git add .
   - git commit --allow-empty -m "Deploying site for %CURRENT_COMMIT%"
   - git push origin master
