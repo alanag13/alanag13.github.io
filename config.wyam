@@ -1,4 +1,4 @@
-Settings.Host = "alangrgic.com";
-GlobalMetadata["Title"] = "Alan Grgic";
-GlobalMetadata["Description"] = "Alan, Automated.";
-GlobalMetadata["Intro"] = "Hi! I'm a full stack software developer based in Minneapolis, MN.";
+Settings[Keys.Host] = "alangrgic.com";
+Settings[BlogKeys.Title] = "Alan Grgic";
+Settings[BlogKeys.Description] = "Alan, Automated.";
+Settings[BlogKeys.Intro] = "Hi! I'm a full stack software developer based in Minneapolis, MN.";
