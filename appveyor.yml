@@ -49,9 +49,9 @@ on_success:
   - git clone -b master "https://%GH_TOKEN%@%GH_REF%" _deploy  
   - cd _deploy
   #delete the whole site
-  - del /S *
+  - del /S /F /Q *
   #add some github config files
-  - touch .nojekyll
+  - type NUL > .nojekyll
   - echo alangrgic.com > CNAME
   #copy the new site over
   - xcopy ..\output . /E
