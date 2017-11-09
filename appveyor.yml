@@ -49,12 +49,12 @@ on_success:
   - git clone -b master "https://%GH_TOKEN%@%GH_REF%" _deploy  
   - cd _deploy
   #delete the whole site
-  - git rm -rf .
+  - rm -rf .
   #add some github config files
   - touch .nojekyll
   - echo alangrgic.com > CNAME
   #copy the new site over
   - xcopy ..\output . /E
-  - git add .
+  - git add -A
   - git commit --allow-empty -m "Deploying site for %CURRENT_COMMIT%"
   - git push origin master
