@@ -1,3 +1,5 @@
+Pipelines.Remove("Resources");
+Pipelines.Remove("Sass");
 Settings[Keys.Host] = "alangrgic.com";
 Settings[BlogKeys.Title] = "Alan Grgic";
 Settings[BlogKeys.Description] = "Alan, Automated.";
