@@ -13,7 +13,7 @@
   .responsive-invisibility() {
     display: none !important;
   }
-  
+
 // WebKit-style focus
 
 .tab-focus() {
@@ -22,5 +22,11 @@
     // but that seems to erroneously remove the outline in Firefox altogether.)
     outline: 5px auto -webkit-focus-ring-color;
     outline-offset: -2px;
+  }
+
+.vertical-align() {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
   }
     
