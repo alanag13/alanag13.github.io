@@ -1,5 +1,17 @@
+#n Wyam.Minification
+#n Wyam.Less
+
 Pipelines.Remove("Resources");
 Pipelines.Remove("Sass");
+Pipelines.Remove("Less");
+
+Pipelines.Add("Less",
+    ReadFiles("**/master-styles.less"),
+    Less(),
+    MinifyCss(),
+    WriteFiles()
+);
+
 Settings[Keys.Host] = "alangrgic.com";
 Settings[BlogKeys.Title] = "Alan Grgic";
 Settings[BlogKeys.Description] = "Alan, Automated.";
