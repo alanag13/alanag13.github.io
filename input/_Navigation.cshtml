@@ -1,19 +1,18 @@
-<img class="avatar-circle" src="https://gravatar.com/avatar/b0a1671bb473c5193baf0a9da7116a94?s=150">
+<img class="avatar-circle" src="https://gravatar.com/avatar/b0a1671bb473c5193baf0a9da7116a94?s=150" alt="Alan Grgic's avatar">
 <div class="site-heading">
-    @if(Context.String(BlogKeys.Description) != null)
-    {
-        <h1>@Context.String(BlogKeys.Description)</h1>
-    }
-    @if(Context.String(BlogKeys.Intro) != null)
-    {            
-        @if(Context.String(BlogKeys.Description) != null)
-        {
-            <hr class="small">
-        }
+        <h1>Alan, Automated.</h1>
+        <hr class="small" />
+        @if(Context.String(BlogKeys.Intro) != null)
+        {   
         <span class="subheading">@Context.String(BlogKeys.Intro)</span>
-    }
+        } 
+    <div class="social-links">
+        <a href="https://github.com/alanag13"><img src="@Context.GetLink("/assets/images/github.svg")"/></a>
+        <a href="https://twitter.com/spellgrgicright"><img src="@Context.GetLink("/assets/images/twitter.svg")"/></a>
+        <a href="https://www.linkedin.com/notifications/"><img src="@Context.GetLink("/assets/images/linkedin.svg")"/></a>
+        <a href="mailto:alan.grgic@gmail.com"><img class="evelope-icon" src="@Context.GetLink("/assets/images/mail.svg")"/></a>
+    </div>  
 </div>
-
 @{
     if(false){
         List<Tuple<string, string>> pages = Context
