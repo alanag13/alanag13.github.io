@@ -3,9 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "description": "The personal blog of Alan Grgic",
-  "dependencies": {
-    "bootstrap": "^3.3.7"
-  },
+  "dependencies": {},
   "scripts": {
     "start": "Wyam.exe -r Blog -t CleanBlog -wp",
     "wyam": "Wyam -r Blog -t CleanBlog",
