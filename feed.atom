@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<link rel="self" href="http://alangrgic.com/" />
 	<id>http://alangrgic.com/</id>
-	<title>Alan Grgic</title>
+	<title>My Blog</title>
 	<rights>2017</rights>
-	<updated>2017-12-21T17:57:15Z</updated>
-	<subtitle>Alan, Automated.</subtitle>
+	<updated>2017-12-21T21:34:40Z</updated>
+	<subtitle>Welcome!</subtitle>
 	<entry>
 		<link href="http://alangrgic.com/posts/first-post" />
 		<id>http://alangrgic.com/posts/first-post</id>
