@@ -17,3 +17,4 @@ Pipelines.Add("Less",
 );
 
 Settings[Keys.Host] = "alangrgic.com";
+Settings[BlogKeys.Description] = "Alan, Automated.";
