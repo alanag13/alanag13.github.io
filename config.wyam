@@ -10,7 +10,7 @@ Pipelines.Add("Resources",
             WriteFiles());
 
 Pipelines.Add("Less",
-    ReadFiles("**/master-styles.less", "**/fonts.less"),
+    ReadFiles("**/master-styles.less"),
     Less(),
     MinifyCss(),
     WriteFiles()

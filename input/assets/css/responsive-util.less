@@ -21,70 +21,19 @@
 @-ms-viewport {
     width: device-width;
   }
-  
-  
-  // Visibility utilities
-  // Note: Deprecated .visible-xs, .visible-sm, .visible-md, and .visible-lg as of v3.2.0
-  .visible-xs,
-  .visible-sm,
-  .visible-md,
-  .visible-lg {
-    .responsive-invisibility();
-  }
-  
-  .visible-xs-block,
-  .visible-xs-inline,
-  .visible-xs-inline-block,
-  .visible-sm-block,
-  .visible-sm-inline,
-  .visible-sm-inline-block,
-  .visible-md-block,
-  .visible-md-inline,
-  .visible-md-inline-block,
-  .visible-lg-block,
-  .visible-lg-inline,
-  .visible-lg-inline-block {
+  .visible-md-block
+  .visible-lg-block {
     display: none !important;
   }
 
-  .visible-md {
-    @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
-      .responsive-visibility();
-    }
-  }
+
   .visible-md-block {
     @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
       display: block !important;
     }
   }
-  .visible-md-inline {
-    @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
-      display: inline !important;
-    }
-  }
-  .visible-md-inline-block {
-    @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
-      display: inline-block !important;
-    }
-  }
-  
-  .visible-lg {
-    @media (min-width: @screen-lg-min) {
-      .responsive-visibility();
-    }
-  }
   .visible-lg-block {
     @media (min-width: @screen-lg-min) {
       display: block !important;
-    }
-  }
-  .visible-lg-inline {
-    @media (min-width: @screen-lg-min) {
-      display: inline !important;
-    }
-  }
-  .visible-lg-inline-block {
-    @media (min-width: @screen-lg-min) {
-      display: inline-block !important;
     }
   }
