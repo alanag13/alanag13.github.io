@@ -9,7 +9,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
 
-        <title>@PageTitle</title>
+        <title> | @Context.String(BlogKeys.Description)</title>
         <meta name="description" content="@Context.String(BlogKeys.Description)" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">        
 
@@ -24,7 +24,7 @@
 
         <link rel="stylesheet" href="@Context.GetLink("/assets/css/master-styles.css")">
 
-        <meta property="og:title" content="@PageTitle" />
+        <meta property="og:title" content="| @Context.String(BlogKeys.Description)" />
         @* <meta property="og:image" content="@Blog.Image" /> *@
         <meta property="og:type" content="website" />
         <meta property="og:url" content="@Context.GetLink(Model, true)" />

@@ -5,8 +5,8 @@ Pipelines.Remove("Resources");
 Pipelines.Remove("Sass");
 Pipelines.Remove("Less");
 
-Pipelines.Add("Images",
-            ReadFiles("**/images/*"),
+Pipelines.Add("Resources",
+            ReadFiles("**/images/*", "**/fonts/*"),
             WriteFiles());
 
 Pipelines.Add("Less",
