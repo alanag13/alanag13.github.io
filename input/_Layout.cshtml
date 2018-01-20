@@ -6,56 +6,51 @@
 <!DOCTYPE html>
 <html lang="en">
         <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+                <meta charset="utf-8">
+                <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
 
-        <title> | @Context.String(BlogKeys.Description)</title>
-        <meta name="description" content="@Context.String(BlogKeys.Description)" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">        
+                <title> | @Context.String(BlogKeys.Description)</title>
+                <meta name="description" content="@Context.String(BlogKeys.Description)" />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">        
 
-        <!-- @if (Context.String(BlogKeys.RssPath) != null) {
-        <link type="application/rss+xml" rel="alternate" title="@Context.String(BlogKeys.Title)" href="@Context.GetLink(Context.String(BlogKeys.RssPath))" />
-        }
-        @if (Context.String(BlogKeys.AtomPath) != null) {
-        <link type="application/atom+xml" rel="alternate" title="@Context.String(BlogKeys.Title)" href="@Context.GetLink(Context.String(BlogKeys.AtomPath))" />
-        } -->
-        <link rel="shortcut icon" href="@Context.GetLink("/favicon.ico")" type="image/x-icon">
-        <link rel="icon" href="@Context.GetLink("/favicon.ico")" type="image/x-icon">
+                <!-- @if (Context.String(BlogKeys.RssPath) != null) {
+                <link type="application/rss+xml" rel="alternate" title="@Context.String(BlogKeys.Title)" href="@Context.GetLink(Context.String(BlogKeys.RssPath))" />
+                }
+                @if (Context.String(BlogKeys.AtomPath) != null) {
+                <link type="application/atom+xml" rel="alternate" title="@Context.String(BlogKeys.Title)" href="@Context.GetLink(Context.String(BlogKeys.AtomPath))" />
+                } -->
+                <link rel="shortcut icon" href="@Context.GetLink("/favicon.ico")" type="image/x-icon">
+                <link rel="icon" href="@Context.GetLink("/favicon.ico")" type="image/x-icon">
 
-        <link rel="stylesheet" href="@Context.GetLink("/assets/css/master-styles.css")">
+                <link rel="stylesheet" href="@Context.GetLink("/assets/css/master-styles.css")">
 
-        <meta property="og:title" content="| @Context.String(BlogKeys.Description)" />
-        @* <meta property="og:image" content="@Blog.Image" /> *@
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="@Context.GetLink(Model, true)" />
-        <!-- TODO: More social graph meta tags -->                        
-        @Html.Partial("_Head")
-
+                <meta property="og:title" content="| @Context.String(BlogKeys.Description)" />
+                @* <meta property="og:image" content="@Blog.Image" /> *@
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="@Context.GetLink(Model, true)" />
+                <!-- TODO: More social graph meta tags -->                        
+                @Html.Partial("_Head")
         </head>
         <body>                
                 <!-- Main Nav -->
-                <nav class="visible-md-block visible-lg-block global-nav">
+                <nav class="visible-md visible-lg global-nav">
                                 
                         <div class="global-nav-content">
                                 @Html.Partial("_Navigation")   
                         </div>                                     
                 </nav>        
                 <!-- Main Content -->
-                <div class="main-content">
-                        <div class="row">
-                                <div>
-                                @if(IsSectionDefined("PostHeader"))
-                                {
-                                        @RenderSection("PostHeader")
-                                }
-                                        @RenderBody()
-                                        <!-- Footer -->
-                                        <footer>
-                                                @Html.Partial("_Footer") 
-                                        </footer> 
-                                </div>
-                        </div>
-                </div>
+                <main class="main-content">
+                        @if(IsSectionDefined("PostHeader"))
+                        {
+                                @RenderSection("PostHeader")
+                        }
+                        @RenderBody()
+                        <!-- Footer -->
+                        <footer>
+                                @Html.Partial("_Footer") 
+                        </footer> 
+                </main>
 
                 @Html.Partial("_Scripts")
         </body>
