@@ -32,13 +32,11 @@
                 @Html.Partial("_Head")
         </head>
         <body>                
-                <!-- Main Nav -->
-                <nav class="visible-md visible-lg global-nav">
-                                
-                        <div class="global-nav-content">
-                                @Html.Partial("_Navigation")   
-                        </div>                                     
-                </nav>        
+                <!-- Main Nav -->      
+                <nav class="global-nav">
+                        @Html.Partial("_Navigation")   
+                </nav>                                     
+      
                 <!-- Main Content -->
                 <main class="main-content">
                         @if(IsSectionDefined("PostHeader"))

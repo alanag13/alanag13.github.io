@@ -1,40 +1,36 @@
 .global-nav {
     position: fixed;
+    width: 100%;
     top: 0;
-    bottom: 0;
-    width: 30%;
-    max-width: 360px;
-    background: @brand-primary url("../images/nav-bg.svg");
-}
-
-.global-nav-content {
-    .vertical-align();
+    background: @brand-primary url("../images/nav-bg.svg");   
     hr {
         max-width: 100px;
         margin: 15px auto;
     }
-    height: 426px;
     color: white;
 }
 
 .site-heading {
-    text-align: center;
+    display: table;
     h1 {
+        display: table-cell;
+        vertical-align: middle;
+        font-size: 20px;
         margin: 0;
+        a {
+            color: white;
+        }
     }
+}
+
+.avatar-wrapper {
+    max-width: 50px;
+    margin: 5px;
 }
 
 .avatar-circle {
-    margin: 0 auto 15px;
-    display: block;
     border-radius: 50%;
-    border: 3px solid white;
-}
-
-@media (min-width: @screen-lg-min) {
-    .global-nav{
-        min-width: 430px;
-    }
+    width: 100%;
 }
 
 .social-links {
@@ -42,3 +38,4 @@
         margin: 0 15px;
     }
 }
+

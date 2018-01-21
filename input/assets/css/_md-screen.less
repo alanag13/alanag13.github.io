@@ -1,0 +1,41 @@
+@media (min-width: @screen-md-min) {
+    .visible-md {
+        display: inherit;
+    }
+
+    .main-content {
+        margin: 0;
+        margin-left: 30%;
+    }
+
+    .global-nav {
+        bottom: 0;
+        width: 30%;
+        max-width: 360px;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        align-items: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+
+    .site-heading {
+        display: block;
+        text-align: center;
+        h1 {
+            display: block;
+            font-size: @font-size-h1;
+        }
+    }
+
+    .avatar-wrapper {
+        max-width: inherit;
+        margin: 15px auto;
+    }
+    
+    .avatar-circle {
+        width: auto;
+        border: 3px solid white;
+    }
+}

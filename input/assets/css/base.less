@@ -1,18 +1,14 @@
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+body {
+  margin: 0;
+  font-size: @font-size-base;
+  color: @text-color;
+  background-color: @body-bg;
+}
 
-html {
-    font-family: sans-serif; // 1
-    -ms-text-size-adjust: 100%; // 2
-    -webkit-text-size-adjust: 100%; // 2
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-  }
-  body {
-    margin: 0;
+  html, body {
     font-family: @font-family-base;
-    font-size: @font-size-base;
-    line-height: @line-height-base;
-    color: @text-color;
-    background-color: @body-bg;
+    height:100%;
   }
 
   b,
@@ -35,8 +31,15 @@ html {
 
   code,
   pre{
-    font-family: monospace, monospace;
+    font-family: @font-family-monospace;
     font-size: 1em;
+  }
+
+  main,
+  article,
+  aside,
+  section {
+    display: block;
   }
     
   //
@@ -97,14 +100,9 @@ html {
     color: @link-color;
     text-decoration: none;
   
-    &:hover,
-    &:focus {
+    &:hover {
       color: @link-hover-color;
       text-decoration: @link-hover-decoration;
-    }
-  
-    &:focus {
-      .tab-focus();
     }
   }
 
@@ -114,7 +112,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: @headings-font-weight;
   line-height: @headings-line-height;
   color: @headings-color;
-  margin-top: @line-height-computed;
+  margin: 0;
   margin-bottom: (@line-height-computed / 2);
 }
 

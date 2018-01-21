@@ -1,26 +1,28 @@
-<img class="avatar-circle" src="https://gravatar.com/avatar/b0a1671bb473c5193baf0a9da7116a94?s=120" alt="Alan Grgic's avatar">
 <div class="site-heading">
-        <h1>@Context.String(BlogKeys.Description)</h1>
-        <hr class="small" />
-        @if(Context.String(BlogKeys.Intro) != null)
-        {   
-        <span class="subheading">@Context.String(BlogKeys.Intro)</span>
-        } 
-    <div class="social-links">
-        <a href="https://github.com/alanag13" title="GitHub">
-            <img src="/assets/images/github.svg" alt="GitHub icon"/>
-        </a>
-        <a href="https://twitter.com/spellgrgicright" title="Twitter">
-            <img src="/assets/images/twitter.svg" alt="Twitter icon"/>
-        </a>
-        <a href="https://www.linkedin.com/in/alan-grgic-30776b53/" title="LinkedIn">
-            <img src="/assets/images/linkedin.svg" alt="LinkedIn icon"/>
-        </a>
-        <a href="mailto:alan.grgic@gmail.com" title="Email">
-            <img src="/assets/images/mail.svg" alt="mail icon"/>
-        </a>
-    </div>  
+    <div class="avatar-wrapper">
+        <a href="/" title="Home"><img class="avatar-circle" src="https://gravatar.com/avatar/b0a1671bb473c5193baf0a9da7116a94?s=120" alt="Alan Grgic's avatar"></a>
+    </div>
+    <h1><a href="/" title="Home">@Context.String(BlogKeys.Description)</a></h1>
+    <div class="visible-md">
+        <hr />
+        <div class="social-links">
+            <a href="https://github.com/alanag13" title="GitHub">
+                <img src="/assets/images/github.svg" alt="GitHub icon"/>
+            </a>
+            <a href="https://twitter.com/spellgrgicright" title="Twitter">
+                <img src="/assets/images/twitter.svg" alt="Twitter icon"/>
+            </a>
+            <a href="https://www.linkedin.com/in/alan-grgic-30776b53/" title="LinkedIn">
+                <img src="/assets/images/linkedin.svg" alt="LinkedIn icon"/>
+            </a>
+            <a href="mailto:alan.grgic@gmail.com" title="Email">
+                <img src="/assets/images/mail.svg" alt="mail icon"/>
+            </a>
+        </div>  
+    </div>
 </div>
+
+
 @{
     if(false){
         List<Tuple<string, string>> pages = Context
