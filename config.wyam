@@ -10,11 +10,11 @@ Pipelines.Add("Resources",
             WriteFiles());
 
 Pipelines.Add("Less",
-    ReadFiles("**/master-styles.less"),
+    ReadFiles("**/main.less", "**/non-critical.less", "**/md-screen.less"),
     Less(),
     MinifyCss(),
     WriteFiles()
 );
 
 Settings[Keys.Host] = "alangrgic.com";
-Settings[BlogKeys.Description] = "Alan, Automated.";
+Settings[BlogKeys.Description] = "Alan Grgic.";
