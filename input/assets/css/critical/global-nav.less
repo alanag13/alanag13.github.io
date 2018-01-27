@@ -6,11 +6,10 @@
 }
 
 .site-heading {
-    display: table;
+    display: flex;
+    align-items: center;
     height: 70px;
     h1 {
-        display: table-cell;
-        vertical-align: middle;
         font-size: 24px;
         margin: 0;
         a {
@@ -20,13 +19,11 @@
 }
 
 .avatar-wrapper {
-    width: 55px;
+    width: 50px;  
+    height: 50px;  
     margin: 5px 10px;
-}
-
-.avatar-circle {
+    background: url('https://gravatar.com/avatar/b0a1671bb473c5193baf0a9da7116a94?s=50');
     border-radius: 50%;
-    width: 100%;
 }
 
 .social-links {
