@@ -5,16 +5,16 @@ Pipelines.Remove("Resources");
 Pipelines.Remove("Sass");
 Pipelines.Remove("Less");
 
-Pipelines.Add("Resources",
-            ReadFiles("**/images/*", "**/fonts/*"),
-            WriteFiles());
-
-Pipelines.Add("Less",
+Pipelines.InsertBefore("Pages", "Less",
     ReadFiles("**/main.less", "**/non-critical.less", "**/md-screen.less"),
     Less(),
     MinifyCss(),
     WriteFiles()
 );
+
+Pipelines.Add("Resources",
+            ReadFiles("**/images/*", "**/fonts/Raleway*", "**/fonts/RobotoSlab*"),
+            WriteFiles());
 
 Settings[Keys.Host] = "alangrgic.com";
 Settings[BlogKeys.Description] = "Alan Grgic.";

@@ -1,4 +1,5 @@
 @{
+
         string Title = Model.WithoutSettings.String(BlogKeys.Title);
         string PageTitle = Context.String(BlogKeys.Title) + (string.IsNullOrWhiteSpace(Title) ? string.Empty : " - " + Title);
 }
@@ -25,7 +26,10 @@
                 <link rel="icon" href="@Context.GetLink("/favicon.ico")" type="image/x-icon">
 
 
-                <link rel="stylesheet" href="@Context.GetLink("/assets/css/critical/main.css")">
+                <!-- <link rel="stylesheet" href="@Context.GetLink("/assets/css/critical/main.css")"> -->
+                <style>
+                        @Html.Raw(System.IO.File.ReadAllText(System.IO.Path.Combine(System.IO.Directory.GetCurrentDirectory(), "output/assets/css/critical/main.css")))
+                </style>
                 <link rel="stylesheet" href="@Context.GetLink("/assets/css/md-screen.css")" media="(min-width:992px)">
                 
 

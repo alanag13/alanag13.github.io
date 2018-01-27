@@ -1,20 +1,13 @@
-body {
+  
+  html, body {
+    font-family: @font-family-base;
+    height:100%;
     margin: 0;
     font-size: @font-size-base;
     color: @text-color;
     background-color: @body-bg;
   }
-  
-  html, body {
-    font-family: @font-family-base;
-    height:100%;
-  }
-  
-  b,
-  strong {
-    font-weight: bold;
-  }
-  
+    
   img {
     border: 0;
   }
@@ -24,13 +17,12 @@ body {
     height: 0;
   }
       
-    main,
-    article,
-    aside,
-    section,
-    nav {
-      display: block;
-    }
+  main,
+  article,
+  section,
+  nav {
+    display: block;
+  }
 
  /** global rules **/
  h1, h2, h3, h4, h5, h6 {
@@ -38,8 +30,7 @@ body {
     font-weight: @headings-font-weight;
     line-height: @headings-line-height;
     color: @headings-color;
-    margin: 0;
-    margin-bottom: (@line-height-computed / 2);
+    margin: 0 0 (@line-height-computed / 2) 0;
   }
   
   h1 { font-size: @font-size-h1; }
@@ -52,11 +43,7 @@ body {
   
   // Body text
   // -------------------------
-  
-  p {
-    margin: 0 0 (@line-height-computed / 2);
-  }
-  
+
   .lead {
     margin-bottom: @line-height-computed;
     font-size: floor((@font-size-base * 1.15));
@@ -64,22 +51,11 @@ body {
     line-height: 1.4;
   }
   
-  // Lists
-  // -------------------------
-  
-  // Unordered and Ordered lists
-  ul,
-  ol {
-    margin-top: 0;
-    margin-bottom: (@line-height-computed / 2);
+  ul, p {
+    margin: 0 0 (@line-height-computed / 2) 0;
   }
 
 a {
     color: @link-color;
     text-decoration: none;
-    
-    &:hover {
-        color: @link-hover-color;
-        text-decoration: @link-hover-decoration;
-    }
 }
